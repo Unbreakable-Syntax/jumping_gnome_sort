@@ -3,3 +3,9 @@ The original sorting logic of Gnome Sort is simple, it checks if **arr[i]** is g
 
 # Skipping logic
 Instead of having to iterate, this variant introduces a small change, when a swap is performed, the sorting algorithm now tracks the original location of **arr[i]**, when the swap is done and **arr[i]** in its rightful spot, instead of looping back, the algorithm simply skips ahead of all numbers before the **original location of arr[i] + 1** and resume from there immediately, the skipped numbers are already sorted. The location must be added by 1 to make up for the "shifting" of elements, and so that the last element of sorted portion of the array is not read, reducing comparisons.
+
+It has the following characteristics, despite the optimization, the characteristics are exactly the same as the original implementation.
+
+```
+Best    Average    Worst    Stable
+O(n)     O(n²)     O(n²)     Yes
