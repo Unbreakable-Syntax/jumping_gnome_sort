@@ -9,3 +9,6 @@ It has the following characteristics, despite the optimization, the characterist
 ```
 Best     Average     Worst     Stable     Deterministic
 O(n)      O(n²)      O(n²)      Yes            Yes
+```
+# Benchmark
+I have included a benchmark file of this variant compared to the original variant on several inputs, and you can see that there is 20% performance improvement. However, when I saw that Insertion sort performs way better than even this optimized variant of Gnome sort on reverse-sorted input, I have lost interest. I have no complete idea as to why this is the case, but my best guess is because Gnome sort swaps elements, whereas Insertion sort shifts elements, these operations have different overhead.
