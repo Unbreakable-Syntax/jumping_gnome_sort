@@ -7,5 +7,5 @@ Instead of having to iterate, this variant introduces a small change, when a swa
 It has the following characteristics, despite the optimization, the characteristics are exactly the same as the original implementation.
 
 ```
-Best    Average    Worst    Stable
-O(n)     O(n²)     O(n²)     Yes
+Best     Average     Worst     Stable     Deterministic
+O(n)      O(n²)      O(n²)      Yes            Yes
