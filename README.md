@@ -1,4 +1,4 @@
-# Gnome sort
+# Overview
 The original sorting logic of Gnome Sort is simple, it checks if **arr[i]** is greater than **arr[i - 1]**, if it's not, the sorting algorithm will swap the two numbers, decrement **i**, check again if **arr[i]** is greater than **arr[i - 1]** again, if no, swap, decrement **i**, until **arr[i]** is at the correct position. But the original implementation has a problem: After **arr[i]** is now at the correct position, the main loop will have to iterate back to where **arr[i]** originally was before a swap is performed, if **arr[i]** was swapped a little near from its previous location, this would be fine, but in some cases, **arr[i]** is swapped way too far from its original position, because it is far, the iteration is going to be slow, and the sorting algorithm won't be able to resume the sorting process until the main loop reaches the original location of **arr[i]**.
 
 # Skipping logic
@@ -11,4 +11,12 @@ Best     Average     Worst     Stable     Deterministic
 O(n)      O(n²)      O(n²)      Yes            Yes
 ```
 # Benchmark
-I have included a benchmark file of this variant compared to the original variant on several inputs, it is consistent that there is 20% performance improvement. However, when I saw that Insertion sort performs way better than even this optimized variant of Gnome sort on reverse-sorted input, I have lost interest. I have no complete idea as to why this is the case, but my best guess is because Gnome sort swaps elements, whereas Insertion sort shifts elements, these operations have different overhead. At this point, I would say that Insertion sort is still the superior choice.
+I have included a benchmark file of this variant compared to the original variant on several inputs, it is consistent that there is 20% performance improvement. I will add additional benchmarks soon.
+
+# Usage
+This sorting algorithm has not been uploaded to Cargo, if you wish to use this sorting algorithm, please go to the main.rs file and copy the code.
+
+# Objective
+This sorting algorithm is not really ideal for primary usage, even with the applied optimization. I have made this variant since I believe that this specific Gnome sort variant has not yet existed somewhere else, and I wanted to create my own optimized variant of this sorting algorithm. The skipping logic should give Gnome Sort a boost in performance, but I believe this is all that could be done to Gnome Sort to make it faster without changing its core logic too much.
+
+Please feel free to use this Gnome Sort variant as an educational tool, a reference, or if you want to use it in your own project.
