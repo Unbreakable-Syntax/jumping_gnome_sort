@@ -7,8 +7,8 @@ Instead of having to iterate, this variant introduces a small change, when a swa
 It has the following characteristics, despite the optimization, the characteristics are exactly the same as the original implementation.
 
 ```
-Best     Average     Worst     Stable     Deterministic
-O(n)      O(n²)      O(n²)      Yes            Yes
+Best     Average     Worst     Memory     Stable     Deterministic
+O(n)      O(n²)      O(n²)      O(1)      Yes        Yes
 ```
 # Benchmark
 I have included a benchmark file of this variant compared to the original variant on several inputs, it is consistent that there is 20% performance improvement. I will add additional benchmarks soon.
