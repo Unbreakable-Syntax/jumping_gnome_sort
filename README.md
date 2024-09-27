@@ -19,4 +19,4 @@ This sorting algorithm has not been uploaded to Cargo, if you wish to use this s
 # Objective
 This sorting algorithm is not really ideal for primary usage, even with the applied optimization. I have made this variant since I believe that this specific Gnome sort variant has not yet existed somewhere else, and I wanted to create my own optimized variant of this sorting algorithm. The skipping logic should give Gnome Sort a boost in performance, but I believe this is all that could be done to Gnome Sort to make it faster without changing its core logic too much.
 
-Please feel free to use this Gnome Sort variant as an educational tool, a reference, or if you want to use it in your own project.
+Please feel free to use this Gnome Sort variant as an educational tool, as a reference, or if you want to use it in your own project.
