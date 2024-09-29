@@ -8,7 +8,8 @@ fn main() {
     println!("Sorted: {:?}", arr);
 }
 
-fn skipping_gnome_sort(arr: &mut Vec<i32>)
+// Version A
+fn jumping_gnome_sort(arr: &mut Vec<i32>)
 {
     let mut i: usize = 0;
     let mut prev: usize = 0;
@@ -17,13 +18,35 @@ fn skipping_gnome_sort(arr: &mut Vec<i32>)
         if i == 0 || arr[i] >= arr[i - 1]
         {
             if prev != 0
-            { i = prev + 1; prev = 0; continue; }
+            { i = prev; prev = 0; }
             i += 1;
         }
         else
         {
             arr.swap(i, i - 1);
             if prev == 0 { prev = i; }
+            i -= 1;
+        }
+    }
+}
+
+// Version B
+fn jumping_gnome_sort_b(arr: &mut Vec<i32>)
+{
+    let mut i: usize = 0;
+    let mut n: usize = arr.len();
+    let mut prev: usize = 0;
+    while i < n
+    {
+        if i == 0 || arr[i] >= arr[i - 1]
+        {
+            if i < prev { i = prev; }
+            i += 1;
+            prev += 1;
+        }
+        else
+        {
+            arr.swap(i, i - 1);
             i -= 1;
         }
     }
