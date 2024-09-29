@@ -9,6 +9,8 @@ fn main() {
 }
 
 // Version A
+// prev variable is used as a "teleporter" variable
+// When n is at its proper spot, n is given the value of prev
 fn jumping_gnome_sort(arr: &mut Vec<i32>)
 {
     let mut i: usize = 0;
@@ -31,6 +33,7 @@ fn jumping_gnome_sort(arr: &mut Vec<i32>)
 }
 
 // Version B
+// prev variable goes along with i, but it is not decremented during swapping
 fn jumping_gnome_sort_b(arr: &mut Vec<i32>)
 {
     let mut i: usize = 0;
@@ -47,6 +50,30 @@ fn jumping_gnome_sort_b(arr: &mut Vec<i32>)
         else
         {
             arr.swap(i, i - 1);
+            i -= 1;
+        }
+    }
+}
+
+// Version C
+// prev variable is used as a "jumper" variable
+// prev counts how many times i has been decremented
+fn skipping_gnome_sort_c(arr: &mut Vec<i32>)
+{
+    let mut i: usize = 0;
+    let mut n: usize = arr.len();
+    let mut prev: usize = 0;
+    while i < n
+    {
+        if i == 0 || arr[i] >= arr[i - 1]
+        {
+            if prev != 0 { i = prev; prev = 0; }
+            i += 1;
+        }
+        else
+        {
+            arr.swap(i, i - 1);
+            prev += 1;
             i -= 1;
         }
     }
