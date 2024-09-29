@@ -67,7 +67,7 @@ fn skipping_gnome_sort_c(arr: &mut Vec<i32>)
     {
         if i == 0 || arr[i] >= arr[i - 1]
         {
-            if prev != 0 { i = prev; prev = 0; }
+            if prev != 0 { i += prev; prev = 0; }
             i += 1;
         }
         else
