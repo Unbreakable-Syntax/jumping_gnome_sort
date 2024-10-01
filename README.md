@@ -11,7 +11,9 @@ Best     Average     Worst     Memory     Stable     Deterministic
 O(n)      O(n²)      O(n²)      O(1)      Yes        Yes
 ```
 # Benchmark
-I have included a benchmark file of this variant compared to the original variant on several inputs, it is consistent that there is 20% performance improvement. I will add additional benchmarks soon.
+I have included a benchmark of this variant compared to the original variant on several inputs, it is consistent that there is 20% performance improvement.The benchmark has been performed on my laptop which has the Intel i3-1005G1 processor. Actual sort time varies on input distrbution and computer hardware of the user.
+
+![alt text](https://github.com/Unbreakable-Syntax/jumping_gnome_sort/blob/main/bars.png?raw=true)
 
 # Usage
 This sorting algorithm has not been uploaded to Cargo, if you wish to use this sorting algorithm, please go to the main.rs file and copy the code.
