@@ -11,7 +11,7 @@ Best     Average     Worst     Memory     Stable     Deterministic
 O(n)      O(n²)      O(n²)      O(1)      Yes        Yes
 ```
 # Benchmark
-I have included a benchmark of this variant compared to the original variant on several inputs, it is consistent that there is 20% performance improvement. The benchmark has been performed on my laptop which has the Intel i3-1005G1 processor. Actual sort time varies on input distrbution and computer hardware of the user.
+I have included a benchmark of this variant compared to the original variant on several inputs, it is consistent that there is 20% performance improvement. The benchmark has been performed on my laptop which has the Intel i3-1005G1 processor. Actual sort time varies on input distribution and computer hardware of the user.
 
 ![alt text](https://github.com/Unbreakable-Syntax/jumping_gnome_sort/blob/main/bars1.png?raw=true)
 
