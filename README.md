@@ -6,7 +6,7 @@ Instead of having to iterate, this variant introduces a small change, when a swa
 
 There are 3 ways to write the jumping logic. The first method is by directly assigning the previous location of **n** before swapping to **i**. The second method is to declare a sychronized second copy of **i**, this second copy will not be decremented during the sorting process, when **n** has been placed in its correct spot, the second index copy will now be given to **i**, achieving the jump optimization. The third method is to count how many swaps have been performed to place **n** in its correct spot, when **n** is in its correct spot, the total number of performed swaps will be added to **i**, achieving the leap optimization.
 
-It has the following characteristics, despite the optimization, the characteristics are exactly the same as the original implementation.
+Despite the optimization, the characteristics pf this variant is exactly the same as the original implementation.
 
 ```
 Best     Average     Worst     Memory     Stable     Deterministic
