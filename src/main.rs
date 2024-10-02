@@ -56,7 +56,7 @@ fn jumping_gnome_sort_b(arr: &mut Vec<i32>)
 }
 
 // Version C
-// prev variable is used as a "jumper" variable
+// prev variable is used as a "counter" variable
 // prev counts how many times i has been decremented
 fn skipping_gnome_sort_c(arr: &mut Vec<i32>)
 {
