@@ -62,7 +62,7 @@ public class JumpingGnomeSort
         return arr;
     }
     
-        public static int[] jumpingGnomeSortC(int[] arr)
+    public static int[] jumpingGnomeSortC(int[] arr)
     {
         int i = 0;
         int prev = 0;
