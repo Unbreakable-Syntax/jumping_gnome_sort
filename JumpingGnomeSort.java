@@ -6,7 +6,7 @@ package com.mycompany.jumpinggnomesort;
 
 /**
  *
- * @author Owen
+ * @author Percival
  */
 public class JumpingGnomeSort 
 {
