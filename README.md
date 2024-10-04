@@ -12,6 +12,17 @@ Despite the optimization, the characteristics of this variant is exactly the sam
 Best     Average     Worst     Memory     Stable     Deterministic
 O(n)      O(n²)      O(n²)      O(1)      Yes        Yes
 ```
+
+# Visualization
+These visualizations are produced using Timo Bingmann's [The Sound of Sorting](https://github.com/bingmann/sound-of-sorting/)
+For comparison, here is the original Gnome Sort arranging 256 elements in ascending order.
+
+https://github.com/user-attachments/assets/6d7cf157-b477-41c0-be60-34c7b7a7a82d
+
+This is Jumping Gnome Sort, sorting 256 elements in ascending order, it can be observed in the visualization that this variant no longer has to iterate back to where it stopped after placing a number in its correct spot.
+
+https://github.com/user-attachments/assets/eeea2feb-9e11-4241-a9a6-69406bf6b3d9
+
 # Benchmark
 I have included a benchmark of this variant compared to the original variant on several inputs, it is consistent that there is good performance improvement. The benchmark has been performed on my laptop which has the Intel i3-1005G1 processor. Actual sort time varies based on the input distribution and the user's computer hardware.
 
