@@ -15,6 +15,7 @@ O(n)      O(n²)      O(n²)      O(1)      Yes        Yes
 
 # Visualization
 These visualizations are produced using Timo Bingmann's [The Sound of Sorting](https://github.com/bingmann/sound-of-sorting/)
+
 For comparison, here is the original Gnome Sort arranging 256 elements in ascending order.
 
 https://github.com/user-attachments/assets/6d7cf157-b477-41c0-be60-34c7b7a7a82d
