@@ -20,7 +20,7 @@ For comparison, here is the original Gnome Sort arranging 256 elements in ascend
 
 https://github.com/user-attachments/assets/6d7cf157-b477-41c0-be60-34c7b7a7a82d
 
-This is Jumping Gnome Sort, sorting 256 elements in ascending order, it can be observed in the visualization that this variant no longer has to iterate back to where it stopped after placing a number in its correct spot.
+This is Jumping Gnome Sort, sorting 256 elements in ascending order, it can be observed in the visualization below that this variant no longer scans the sorted portion of the array after placing a number in its correct spot.
 
 https://github.com/user-attachments/assets/eeea2feb-9e11-4241-a9a6-69406bf6b3d9
 
