@@ -17,8 +17,8 @@ fn main() {
 fn jumping_gnome_sort_b(arr: &mut Vec<i32>)
 {
     let mut i: usize = 1;
-    let mut n: usize = arr.len();
     let mut prev: usize = 1;
+    let n: usize = arr.len();
     while i < n
     {
         if i == 0 || arr[i] >= arr[i - 1]
