@@ -14,6 +14,34 @@ public class JumpingGnomeSort
     {
         System.out.println("Hello World!");
     }
+
+    // This is by far the most optimized version
+    // As it skips through the sorted portion of the array
+    // And the index synchronization is done naturally
+    // There is no need for a manual trigger!
+    // This version is comparable to Version B
+    public static int[] optimizedGnomeSort(int[] arr)
+    {
+        int i = 1;
+        int prev = 1;
+        int n = arr.length;
+        while (i < n)
+        {
+            if (i == 0 || arr[i] >= arr[i - 1])
+            {
+                ++prev;
+                i = prev; 
+            }
+            else
+            {
+                int temp = arr[i];
+                arr[i] = arr[i - 1];
+                arr[i - 1] = temp;
+                --i;
+            }
+        }
+        return arr;
+    }
     
     public static int[] jumpingGnomeSortA(int[] arr)
     {
