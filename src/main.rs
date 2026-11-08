@@ -8,6 +8,32 @@ fn main() {
     println!("Sorted: {:?}", arr);
 }
 
+// Definitive version
+// This version is by far the most "efficient" implementation
+// It has the forward traversal optimization
+// And the synchronization of i and prev happens naturally
+// Rather than needing a manual trigger
+// This is a direct "upgrade" of Version B
+fn jumping_gnome_sort_b(arr: &mut Vec<i32>)
+{
+    let mut i: usize = 1;
+    let mut n: usize = arr.len();
+    let mut prev: usize = 1;
+    while i < n
+    {
+        if i == 0 || arr[i] >= arr[i - 1]
+        {
+            prev += 1;
+            i = prev;
+        }
+        else
+        {
+            arr.swap(i, i - 1);
+            i -= 1;
+        }
+    }
+}
+
 // Version A
 // prev variable is used as a "teleporter" variable
 // When n is at its proper spot, n is given the value of prev
