@@ -14,7 +14,7 @@ fn main() {
 // And the synchronization of i and prev happens naturally
 // Rather than needing a manual trigger
 // This is a direct "upgrade" of Version B
-fn jumping_gnome_sort_b(arr: &mut Vec<i32>)
+fn optimized_gnome_sort(arr: &mut Vec<i32>)
 {
     let mut i: usize = 1;
     let mut prev: usize = 1;
