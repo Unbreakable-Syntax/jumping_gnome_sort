@@ -20,7 +20,7 @@ public class JumpingGnomeSort
     // And the index synchronization is done naturally
     // There is no need for a manual trigger!
     // This version is comparable to Version B
-    public static int[] optimizedGnomeSort(int[] arr)
+    public static void optimizedGnomeSort(int[] arr)
     {
         int i = 1;
         int prev = 1;
@@ -40,10 +40,9 @@ public class JumpingGnomeSort
                 --i;
             }
         }
-        return arr;
     }
     
-    public static int[] jumpingGnomeSortA(int[] arr)
+    public static void jumpingGnomeSortA(int[] arr)
     {
         int i = 0;
         int prev = 0;
@@ -64,10 +63,9 @@ public class JumpingGnomeSort
                 --i;
             }
         }
-        return arr;
     }
     
-    public static int[] jumpingGnomeSortB(int[] arr)
+    public static void jumpingGnomeSortB(int[] arr)
     {
         int i = 0;
         int prev = 0;
@@ -87,10 +85,9 @@ public class JumpingGnomeSort
                 --i;
             }
         }
-        return arr;
     }
     
-    public static int[] jumpingGnomeSortC(int[] arr)
+    public static void jumpingGnomeSortC(int[] arr)
     {
         int i = 0;
         int prev = 0;
@@ -110,6 +107,5 @@ public class JumpingGnomeSort
                 --i; ++prev;
             }
         }
-        return arr;
     }
 }
