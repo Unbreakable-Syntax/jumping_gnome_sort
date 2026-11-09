@@ -14,7 +14,7 @@ fn main() {
 // And the synchronization of i and prev happens naturally
 // Rather than needing a manual trigger
 // This is a direct "upgrade" of Version B
-fn optimized_gnome_sort(arr: &mut Vec<i32>)
+fn optimized_gnome_sort(arr: &mut [i32])
 {
     let mut i: usize = 1;
     let mut prev: usize = 1;
@@ -37,7 +37,7 @@ fn optimized_gnome_sort(arr: &mut Vec<i32>)
 // Version A
 // prev variable is used as a "teleporter" variable
 // When n is at its proper spot, n is given the value of prev
-fn jumping_gnome_sort(arr: &mut Vec<i32>)
+fn jumping_gnome_sort(arr: &mut [i32])
 {
     let mut i: usize = 0;
     let mut prev: usize = 0;
@@ -60,7 +60,7 @@ fn jumping_gnome_sort(arr: &mut Vec<i32>)
 
 // Version B
 // prev variable goes along with i, but it is not decremented during swapping
-fn jumping_gnome_sort_b(arr: &mut Vec<i32>)
+fn jumping_gnome_sort_b(arr: &mut [i32])
 {
     let mut i: usize = 0;
     let mut n: usize = arr.len();
@@ -84,7 +84,7 @@ fn jumping_gnome_sort_b(arr: &mut Vec<i32>)
 // Version C
 // prev variable is used as a "counter" variable
 // prev counts how many times i has been decremented
-fn skipping_gnome_sort_c(arr: &mut Vec<i32>)
+fn skipping_gnome_sort_c(arr: &mut [i32])
 {
     let mut i: usize = 0;
     let mut n: usize = arr.len();
@@ -105,7 +105,7 @@ fn skipping_gnome_sort_c(arr: &mut Vec<i32>)
     }
 }
 
-fn shuffle_array(arr: &mut Vec<i32>)
+fn shuffle_array(arr: &mut [i32])
 {
     let mut rand: rand::rngs::ThreadRng = thread_rng();
     let mut random: usize;
